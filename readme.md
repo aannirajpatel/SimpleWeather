@@ -8,6 +8,8 @@ Given below are the step by step instructions on how to get started with making 
 ## Pre-requisite Knowledge
 To effectively follow this tutorial, you must have completed at least Unit 1 and 2 from [this free course by Android Developers](https://developer.android.com/courses/android-basics-kotlin/course), which is the official site for Android developers by Google.
 
+# Setup Steps
+
 ## Step 1  
   
 Create a new Android Studio project with an empty activity. Select API 19. Give a cool name to your app.  
@@ -27,7 +29,7 @@ Create a new Android Studio project with an empty activity. Select API 19. Give 
   
 Register on OpenWeatherMap's [website](https://https://openweathermap.org/) and generate an API key (it's **free**).  
   
-## Step 5  
+## Step 4  
   
 1. Open the Gradle Scripts section in the "Android" project files view mode, then open the `local.properties` file.  
 2. Append the following code snippet to the end of the opened `local.properties` file, replacing the blank with your OpenWeatherMap API key:  
@@ -49,7 +51,7 @@ android {
 }
 </pre>
 
-## Step 4  
+## Step 5  
   
 Start coding the app!  
   
