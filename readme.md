@@ -39,7 +39,7 @@ Register on OpenWeatherMap's [website](https://https://openweathermap.org/) and 
 api_key = ______________  
 `  
 3. Now open the ***Module-level*** `build.gradle` file. Notice there are two kinds of `build.gradle` files, the other one is Project-level.  
-4. Add the following lines to the Module-level `build.gradle` file below the last line **inside** the defaultConfig element area shown in bold here: `android{..., defaultConfig{ `**...**` } }`:  
+4. Add the following lines to the Module-level `build.gradle` file below the last line **inside** the defaultConfig element area as shown:  
 <pre>
 android {  
   ...
