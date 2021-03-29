@@ -20,12 +20,11 @@ Create a new Android Studio project with an empty activity. Select API 19. Give 
   
 1. Add ViewBinding to your newly created project as shown [here](https://developer.android.com/topic/libraries/view-binding)  
 2. Get Retrofit from [here](https://square.github.io/retrofit). This library is used to make network requests to, in this case, the OpenWeatherMap API.  
-3. Add Moshi from [here](https://github.com/square/moshi/). Make sure you get the Kotlin flavor of the library, otherwise if you use the Java flavor, the app will compile but crash at runtime!
-4. Add Moshi converter for Retrofit  from [here](https://github.com/square/retrofit/tree/master/retrofit-converters/moshi).
-5. Add Kotlin coroutines support from [here](https://developer.android.com/kotlin/coroutines).
-6. Add Navigation Component from [here](https://developer.android.com/guide/navigation/navigation-getting-started)
-7. Add SafeArgs gradle plugin from [here](https://developer.android.com/guide/navigation/navigation-pass-data)
-8. Add Picasso for loading images from [here](http://square.github.io/picasso/)
+3. Add Moshi converter for Retrofit  from [here](https://github.com/square/retrofit/tree/master/retrofit-converters/moshi).
+4. Add Kotlin coroutines support from [here](https://developer.android.com/kotlin/coroutines).
+5. Add Navigation Component from [here](https://developer.android.com/guide/navigation/navigation-getting-started)
+6. Add SafeArgs gradle plugin from [here](https://developer.android.com/guide/navigation/navigation-pass-data)
+7. Add Picasso for loading images from [here](http://square.github.io/picasso/)
 
 ## Step 3  
   
