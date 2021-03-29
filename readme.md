@@ -34,7 +34,7 @@ Register on OpenWeatherMap's [website](https://https://openweathermap.org/) and 
 1. Open the Gradle Scripts section in the "Android" project files view mode, then open the `local.properties` file.  
 2. Append the following code snippet to the end of the opened `local.properties` file, replacing the blank with your OpenWeatherMap API key:  
 `  
-apiKey = ______________  
+api_key = ______________  
 `  
 3. Now open the ***Module-level*** `build.gradle` file. Notice there are two kinds of `build.gradle` files, the other one is Project-level.  
 4. Add the following lines to the Module-level `build.gradle` file below the last line **inside** the defaultConfig element area shown in bold here: `android{..., defaultConfig{ `**...**` } }`:  
