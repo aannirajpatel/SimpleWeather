@@ -1,6 +1,8 @@
 
 # SimpleWeather  
-  
+
+<img src="https://github.com/aannirajpatel/SimpleWeather/raw/master/SimpleWeather-Demo.gif" alt="GIF Demo of the App"/>
+
 A simple Android app written in Kotlin that consumes the OpenWeatherMap API using Retrofit and Moshi.  
   
 Given below are the step by step instructions on how to get started with making this app. Refer to this repo whenever you get stuck!  
