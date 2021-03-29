@@ -1,4 +1,4 @@
-package com.example.simpleweather.ui.Weather
+package tech.aanpatel.simpleweather.ui.Weather
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
-import com.example.simpleweather.R
-import com.example.simpleweather.databinding.WeatherFragmentBinding
 import com.squareup.picasso.Picasso
+import tech.aanpatel.simpleweather.R
+import tech.aanpatel.simpleweather.databinding.WeatherFragmentBinding
 import java.util.*
 
 class WeatherFragment : Fragment() {

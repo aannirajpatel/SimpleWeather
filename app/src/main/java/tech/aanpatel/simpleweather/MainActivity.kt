@@ -1,4 +1,4 @@
-package com.example.simpleweather
+package tech.aanpatel.simpleweather
 
 import android.os.Bundle
 import android.view.MenuItem

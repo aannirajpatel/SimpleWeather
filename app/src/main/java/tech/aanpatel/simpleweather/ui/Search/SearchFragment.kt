@@ -1,4 +1,4 @@
-package com.example.simpleweather.ui.Search
+package tech.aanpatel.simpleweather.ui.Search
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,9 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.example.simpleweather.R
-import com.example.simpleweather.api.WeatherAPI
-import com.example.simpleweather.databinding.FragmentSearchBinding
+import tech.aanpatel.simpleweather.api.WeatherAPI
+import tech.aanpatel.simpleweather.R
+import tech.aanpatel.simpleweather.databinding.FragmentSearchBinding
+import tech.aanpatel.simpleweather.ui.Search.SearchFragmentDirections
 
 
 /**
@@ -46,6 +47,9 @@ class SearchFragment : Fragment() {
                 getString(R.string.api_key)
             )
         }
+        _binding!!.infoBtn.setOnClickListener {
+            findNavController().navigate(SearchFragmentDirections.actionSearchFragmentToInfo2())
+        }
         viewModel.weatherGetSuccess.observe(viewLifecycleOwner, Observer {
             if (it) {
                 findNavController().navigate(
@@ -53,9 +57,9 @@ class SearchFragment : Fragment() {
                         temperature = viewModel.temp.value!!,
                         humidity = viewModel.humidity.value!!,
                         pressure = viewModel.pressure.value!!,
-                        city=_binding!!.locationEditText.text.toString(),
+                        city = _binding!!.locationEditText.text.toString(),
                         iconUrl = viewModel.icon.value!!,
-                        weatherType=viewModel.details.value!!
+                        weatherType = viewModel.details.value!!
                     )
                 )
                 viewModel.eventWeatherGetSuccessFinish()
@@ -67,7 +71,7 @@ class SearchFragment : Fragment() {
             if (it) {
                 Toast.makeText(
                     context,
-                    "Error fetching weather data. Please try again.",
+                    getString(R.string.error_fetching),
                     Toast.LENGTH_SHORT
                 ).show()
                 viewModel.eventWeatherGetFailureFinish()

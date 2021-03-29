@@ -5,4 +5,10 @@
     <string name="get_weather">Get Weather!</string>
     <string name="enter_a_city_name">Enter a city name...</string>
     <string name="cityText">Weather in</string>
+    <string name="app_desc">This app is a part of a tutorial for building Android apps that can connect to the internet. It gives you the current weather from the name of the city you enter. The data is fetched from the OpenWeatherMap API. Check out https://github.com/aannirajpatel/SimpleWeather for more information. Thank you for using this app!</string>
+    <string name="dev_desc">My name is Aan Patel. I am a senior undergrad Computer Science student at UNC-Chapel Hill graduating in December 2021, and I am open to Software Development/Software Engineering opportunities. Visit aanpatel.tech to know more about me or to get in touch.</string>
+    <string name="developer">Developer</string>
+    <string name="about_simpleweather">About SimpleWeather</string>
+    <string name="info">App Info</string>
+    <string name="error_fetching">Error fetching weather data. Please try again.</string>
 </resources>

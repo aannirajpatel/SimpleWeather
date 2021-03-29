@@ -1,4 +1,4 @@
-package com.example.simpleweather.api
+package tech.aanpatel.simpleweather.api
 
 import com.squareup.moshi.Json
 
