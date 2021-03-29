@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.simpleweather.ui.Search.SearchFragment"
+        android:label="SimpleWeather"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.example.simpleweather.ui.Weather.WeatherFragment"
+        android:label="Weather Details"
+        tools:layout="@layout/weather_fragment">
+        <argument
+            android:name="temperature"
+            android:defaultValue="54°"
+            app:argType="string" />
+        <argument
+            android:name="pressure"
+            android:defaultValue="1026 hPa"
+            app:argType="string" />
+        <argument
+            android:name="humidity"
+            android:defaultValue="81%"
+            app:argType="string" />
+        <argument
+            android:name="city"
+            android:defaultValue="city"
+            app:argType="string" />
+        <argument
+            android:name="iconUrl"
+            app:argType="string"
+            android:defaultValue="https://openweathermap.org/img/wn/10d@2x.png" />
+        <argument
+            android:name="weatherType"
+            app:argType="string"
+            android:defaultValue="Haze" />
+    </fragment>
+</navigation>

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SimpleWeather</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="get_weather">Get Weather!</string>
+    <string name="enter_a_city_name">Enter a city name...</string>
+    <string name="cityText">Weather in</string>
 </resources>
