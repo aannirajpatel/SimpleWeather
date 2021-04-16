@@ -1,10 +1,12 @@
-package tech.aanpatel.simpleweather.ui.Weather
+package tech.aanpatel.simpleweather.ui.weather
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import com.squareup.picasso.Picasso
 import tech.aanpatel.simpleweather.R
@@ -14,6 +16,7 @@ import java.util.*
 class WeatherFragment : Fragment() {
 
     private var _binding: WeatherFragmentBinding? = null
+    private var viewModel: WeatherViewModel? =null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,11 +30,27 @@ class WeatherFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        //create viewModel and set LifecycleOwner for the binding object
+        viewModel = ViewModelProvider(this).get(WeatherViewModel::class.java)
+        _binding!!.setLifecycleOwner { lifecycle }
 
+        // prepare viewModel
+        viewModel!!.setTemp(args.temperature)
+        viewModel!!.toggleSwitch(true)
+
+        // set the switch listener
+        _binding!!.tempUnitSwitch.setOnClickListener {
+            viewModel!!.toggleSwitch(!((it as Button).text.split(" ")[2]=="Celsius"))
+        }
+
+        // provide viewModel to data binding
+        _binding!!.viewmodel = viewModel
+        _binding!!.executePendingBindings()
+
+        // load the weather image via Picasso
         Picasso.get().load(args.iconUrl).into(_binding!!.weatherIcon);
 
-
-        _binding!!.temperature.text = (args.temperature+"F")
+        // load other stats
         _binding!!.humidity.text = args.humidity
         _binding!!.pressure.text = args.pressure
         _binding!!.cityName.text = (getString(R.string.cityText) + " " + args.city.capitalize(Locale.ROOT))

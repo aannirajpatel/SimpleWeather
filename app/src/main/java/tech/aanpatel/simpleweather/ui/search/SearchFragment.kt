@@ -1,4 +1,4 @@
-package tech.aanpatel.simpleweather.ui.Search
+package tech.aanpatel.simpleweather.ui.search
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,10 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import tech.aanpatel.simpleweather.api.WeatherAPI
 import tech.aanpatel.simpleweather.R
+import tech.aanpatel.simpleweather.api.WeatherAPI
 import tech.aanpatel.simpleweather.databinding.FragmentSearchBinding
-import tech.aanpatel.simpleweather.ui.Search.SearchFragmentDirections
 
 
 /**

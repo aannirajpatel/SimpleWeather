@@ -1,4 +1,4 @@
-package tech.aanpatel.simpleweather.ui.Search
+package tech.aanpatel.simpleweather.ui.search
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

@@ -11,4 +11,6 @@
     <string name="about_simpleweather">About SimpleWeather</string>
     <string name="info">App Info</string>
     <string name="error_fetching">Error fetching weather data. Please try again.</string>
+    <string name="showing_imperial_units_fahrenheit">Showing Imperial Units (Fahrenheit)</string>
+    <string name="showing_metric_units_celsius">Showing Metric Units (Celsius)</string>
 </resources>

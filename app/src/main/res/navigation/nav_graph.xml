@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="tech.aanpatel.simpleweather.ui.Search.SearchFragment"
+        android:name="tech.aanpatel.simpleweather.ui.search.SearchFragment"
         android:label="SimpleWeather"
         tools:layout="@layout/fragment_search">
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/weatherFragment"
-        android:name="tech.aanpatel.simpleweather.ui.Weather.WeatherFragment"
+        android:name="tech.aanpatel.simpleweather.ui.weather.WeatherFragment"
         android:label="Weather Details"
         tools:layout="@layout/weather_fragment">
         <argument

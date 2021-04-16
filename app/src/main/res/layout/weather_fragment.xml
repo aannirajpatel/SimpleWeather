@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.weather.WeatherFragment"
+    >
+    <data>
+        <variable
+            name="viewmodel"
+            type="tech.aanpatel.simpleweather.ui.weather.WeatherViewModel" />
+    </data>
+<ScrollView
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.Weather.WeatherFragment">
+    android:layout_height="match_parent">
 <androidx.constraintlayout.widget.ConstraintLayout android:layout_height="wrap_content" android:layout_width="match_parent">
     <TextView
         android:id="@+id/cityName"
@@ -19,17 +26,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/temperature"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="54°F"
-        android:textColor="@color/black"
-        android:textSize="128sp"
+        android:orientation="vertical"
+        android:id="@+id/temperatureContainer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.temp}"
+            tools:text = "54F"
+            android:textColor="@color/black"
+            android:textSize="128sp" />
+
+
+        <Button
+            android:id="@+id/tempUnitSwitch"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.switchInfo}"
+            tools:text = "SHOW CELSIUS"
+            />
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/humidityLayout"
@@ -41,7 +68,7 @@
         app:layout_constraintEnd_toStartOf="@+id/pressureLayout"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/temperature">
+        app:layout_constraintTop_toBottomOf="@+id/temperatureContainer">
 
         <TextView
             android:id="@+id/humidity"
@@ -70,7 +97,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/humidityLayout"
-        app:layout_constraintTop_toBottomOf="@+id/temperature">
+        app:layout_constraintTop_toBottomOf="@+id/temperatureContainer">
 
         <TextView
             android:id="@+id/pressure"
@@ -109,9 +136,10 @@
         android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="Haze"
-        app:layout_constraintBottom_toTopOf="@+id/temperature"
+        app:layout_constraintBottom_toTopOf="@+id/temperatureContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weatherIcon" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
+</layout>

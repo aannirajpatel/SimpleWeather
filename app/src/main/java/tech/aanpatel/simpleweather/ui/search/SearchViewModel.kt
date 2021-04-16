@@ -1,13 +1,13 @@
-package tech.aanpatel.simpleweather.ui.Search
+package tech.aanpatel.simpleweather.ui.search
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import tech.aanpatel.simpleweather.api.WeatherAPI
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import tech.aanpatel.simpleweather.api.WeatherAPI
 import kotlin.math.roundToInt
 
 class SearchViewModel(private val weatherAPI: WeatherAPI): ViewModel() {
@@ -38,7 +38,7 @@ class SearchViewModel(private val weatherAPI: WeatherAPI): ViewModel() {
                 val weatherData = withContext(Dispatchers.IO) {
                     weatherAPI.getWeatherData(city, apiKey)
                 }
-                _temp.value = weatherData.main!!.temp.roundToInt().toString() + "°"
+                _temp.value = weatherData.main!!.temp.roundToInt().toString() + "°F"
                 _humidity.value = weatherData.main!!.humidity.roundToInt().toString() + "%"
                 _pressure.value = weatherData.main!!.pressure.roundToInt().toString() +" hPa"
                 _icon.value = WeatherAPI.BASE_IMAGE_URL + weatherData.detailsList?.get(0)?.iconName!!+"@4x.png"
