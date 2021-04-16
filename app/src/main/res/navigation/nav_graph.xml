@@ -7,16 +7,27 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.simpleweather.ui.Search.SearchFragment"
+        android:name="tech.aanpatel.simpleweather.ui.Search.SearchFragment"
         android:label="SimpleWeather"
         tools:layout="@layout/fragment_search">
         <action
             android:id="@+id/action_searchFragment_to_weatherFragment"
-            app:destination="@id/weatherFragment" />
+            app:destination="@id/weatherFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_searchFragment_to_info2"
+            app:destination="@id/appInfo"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
     </fragment>
     <fragment
         android:id="@+id/weatherFragment"
-        android:name="com.example.simpleweather.ui.Weather.WeatherFragment"
+        android:name="tech.aanpatel.simpleweather.ui.Weather.WeatherFragment"
         android:label="Weather Details"
         tools:layout="@layout/weather_fragment">
         <argument
@@ -44,4 +55,9 @@
             app:argType="string"
             android:defaultValue="Haze" />
     </fragment>
+    <fragment
+        android:id="@+id/appInfo"
+        android:name="tech.aanpatel.simpleweather.ui.info.Info"
+        android:label="App Info"
+        tools:layout="@layout/fragment_info" />
 </navigation>

@@ -1,11 +1,10 @@
-package com.example.simpleweather.ui.Search
+package tech.aanpatel.simpleweather.ui.Search
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.simpleweather.api.WeatherAPI
+import tech.aanpatel.simpleweather.api.WeatherAPI
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -46,7 +45,7 @@ class SearchViewModel(private val weatherAPI: WeatherAPI): ViewModel() {
                 _details.value = weatherData.detailsList?.get(0)?.weatherType!!
                 _weatherGetSuccess.value=true
             } catch(e:Exception){
-                Log.i("APP_ERROR",e.message.toString());
+                //Log.i("APP_ERROR",e.message.toString());
                 _weatherGetFailure.value=true
             }
         }
